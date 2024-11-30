@@ -7,6 +7,13 @@
       name="description"
       content="Ontdek het verhaal van Batman, de legendarische beschermer van Gotham City. Lees over zijn strijd tegen misdaad, zijn duistere verleden en de kracht van gerechtigheid die hij belichaamt."
     />
+    <meta property="og:title" content="Gotham's Guardian" />
+    <meta property="og:type" content="website" />
+    <meta
+      property="og:image"
+      content="https://example.com/images/batman-cover.jpg"
+    />
+    <meta property="og:url" content="https://example.com/batman" />
     <link rel="stylesheet" href="style.css" />
     <title>BATMAN</title>
   </head>
@@ -14,9 +21,9 @@
     <header>
       <div class="logo">
         <img src="./images/logo-batman.png" alt="Batman Logo" />
-        <a href="./index.html"></a>
       </div>
-      <nav>
+      <button class="hamburger" aria-label="Open navigation">&#9776;</button>
+      <nav class="nav-menu">
         <ul>
           <li><a href="./index.html" class="actief">Home</a></li>
           <li><a href="./pages/ervaringen.html">Ervaringen</a></li>
@@ -24,6 +31,7 @@
         </ul>
       </nav>
     </header>
+
     <main class="content">
       <div class="text">
         <h1>Gotham's Guardian</h1>
@@ -44,5 +52,15 @@
         <a href="./pages/ervaringen.html" class="button">Lees meer...</a>
       </div>
     </main>
+    <script>
+      document.addEventListener("DOMContentLoaded", () => {
+        const hamburger = document.querySelector(".hamburger");
+        const navMenu = document.querySelector(".nav-menu");
+
+        hamburger.addEventListener("click", () => {
+          navMenu.classList.toggle("active");
+        });
+      });
+    </script>
   </body>
 </html>

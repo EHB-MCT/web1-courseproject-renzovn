@@ -7,6 +7,13 @@
       name="description"
       content="Lees over de ervaringen van Batman, zijn werk als beschermer van Gotham en zijn samenwerking met andere helden."
     />
+    <meta property="og:title" content="Gotham's Guardian" />
+    <meta property="og:type" content="website" />
+    <meta
+      property="og:image"
+      content="https://example.com/images/batman-cover.jpg"
+    />
+    <meta property="og:url" content="https://example.com/batman" />
     <link rel="stylesheet" href="../style.css" />
     <title>Ervaringen - Batman</title>
   </head>
@@ -15,7 +22,8 @@
       <div class="logo">
         <img src="../images/logo-batman.png" alt="Batman Logo" />
       </div>
-      <nav>
+      <button class="hamburger" aria-label="Open navigation">&#9776;</button>
+      <nav class="nav-menu">
         <ul>
           <li><a href="../index.html">Home</a></li>
           <li><a href="./ervaringen.html" class="actief">Ervaringen</a></li>
@@ -123,5 +131,15 @@
         </div>
       </div>
     </main>
+    <script>
+      document.addEventListener("DOMContentLoaded", () => {
+        const hamburger = document.querySelector(".hamburger");
+        const navMenu = document.querySelector(".nav-menu");
+
+        hamburger.addEventListener("click", () => {
+          navMenu.classList.toggle("active");
+        });
+      });
+    </script>
   </body>
 </html>
